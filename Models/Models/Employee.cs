@@ -15,11 +15,13 @@ namespace WebAPI.Models
         /// <summary>
         /// 員工姓氏
         /// </summary>
+        [MaxLength(500)]
         public string EmployeeName { get; set; }
 
         /// <summary>
         /// 所屬部門
         /// </summary>
+        [MaxLength(500)]
         public string Department { get; set; }
 
         /// <summary>
@@ -30,6 +32,7 @@ namespace WebAPI.Models
         /// <summary>
         /// 頭像路徑
         /// </summary>
+        [MaxLength(500)]
         public string PhotoFileName { get; set; }
     }
 }

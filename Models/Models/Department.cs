@@ -14,6 +14,7 @@ namespace WebAPI.Models
         /// <summary>
         /// 部門名稱
         /// </summary>
+        [MaxLength(500)]
         public string DepartmentName { get; set; }
     }
 }
