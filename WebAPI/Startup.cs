@@ -54,7 +54,9 @@ namespace WebAPI
             //EntityFrameworkCore
             services.AddDbContext<EFContext>(options =>
             {
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+                //設定遷移元件
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
+                    x => x.MigrationsAssembly("Models"));
             });
 
             services.AddControllers();
